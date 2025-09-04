@@ -36,285 +36,220 @@ Visual representations of the key concepts covered in this chapter:
 
 ### **1. File I/O and Text Processing Flow**
 
+#### **A. Basic File Operations**
 ```mermaid
-flowchart TD
-    A[Start: File I/O Operation] --> B{File Operation Type?}
-    
-    B -->|Read| C[Open File for Reading]
-    B -->|Write| D[Open File for Writing]
-    B -->|Append| E[Open File for Appending]
-    
-    C --> F[Use Context Manager<br/>with open()]
-    D --> F
-    E --> F
-    
-    F --> G{File Exists?}
-    G -->|No| H[Handle File Not Found Error]
-    G -->|Yes| I[Perform File Operation]
-    
-    H --> J[Display Error Message]
-    J --> K[End]
-    
-    I --> L{Operation Type?}
-    L -->|Read All| M[Read Entire File<br/>f.read()]
-    L -->|Read Lines| N[Read Line by Line<br/>for line in f]
-    L -->|Write| O[Write Data to File<br/>f.write()]
-    
-    M --> P[Process Text Data]
-    N --> P
-    O --> Q[File Written Successfully]
-    
-    P --> R{Text Processing Needed?}
-    R -->|Yes| S[Apply String Methods<br/>.strip(), .split(), .replace()]
-    R -->|No| T[Display Results]
-    
-    S --> U[Extract Information<br/>Parse timestamps, levels, messages]
-    U --> V[Analyze Data<br/>Use Counter for frequency]
-    V --> T
-    
-    Q --> T
-    T --> W[Close File Automatically<br/>Context Manager handles this]
-    W --> K
+flowchart LR
+    A[Open File] --> B[Read/Write Data]
+    B --> C[Close File]
     
     style A fill:#e1f5fe
-    style K fill:#f3e5f5
-    style H fill:#ffebee
-    style Q fill:#e8f5e8
-    style V fill:#fff3e0
+    style B fill:#e8f5e8
+    style C fill:#f3e5f5
+```
+
+#### **B. Safe File Handling**
+```mermaid
+flowchart TD
+    A[Start] --> B[Use with open()]
+    B --> C[File Operations]
+    C --> D[Auto Close]
+    D --> E[End]
+    
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style E fill:#f3e5f5
+```
+
+#### **C. Text Processing Steps**
+```mermaid
+flowchart LR
+    A[Raw Text] --> B[Clean Text<br/>.strip()]
+    B --> C[Split Text<br/>.split()]
+    C --> D[Extract Data]
+    D --> E[Analyze<br/>Counter]
+    
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#fff3e0
+    style D fill:#e8f5e8
+    style E fill:#e8f5e8
 ```
 
 ### **2. Asynchronous Programming Flow**
 
+#### **A. Synchronous vs Asynchronous**
 ```mermaid
 flowchart TD
-    A[Start: Program Execution] --> B{Execution Type?}
+    A[Synchronous] --> B[Task 1 → Task 2 → Task 3]
+    B --> C[Total: 3 seconds]
     
-    B -->|Synchronous| C[Synchronous Execution]
-    B -->|Asynchronous| D[Asynchronous Execution]
+    D[Asynchronous] --> E[Task 1, 2, 3 together]
+    E --> F[Total: 1 second]
     
-    C --> E[Task 1 Starts]
-    E --> F[Task 1 Completes]
-    F --> G[Task 2 Starts]
-    G --> H[Task 2 Completes]
-    H --> I[Task 3 Starts]
-    I --> J[Task 3 Completes]
-    J --> K[All Tasks Complete<br/>Total Time: 3 seconds]
-    
-    D --> L[Define async function<br/>async def async_task]
-    L --> M[Start Event Loop<br/>asyncio.run()]
-    M --> N[Create Tasks Concurrently<br/>asyncio.gather()]
-    
-    N --> O[Task 1 Starts]
-    N --> P[Task 2 Starts]
-    N --> Q[Task 3 Starts]
-    
-    O --> R[Task 1: await asyncio.sleep]
-    P --> S[Task 2: await asyncio.sleep]
-    Q --> T[Task 3: await asyncio.sleep]
-    
-    R --> U[Task 1 Completes]
-    S --> V[Task 2 Completes]
-    T --> W[Task 3 Completes]
-    
-    U --> X[All Tasks Complete<br/>Total Time: 1 second]
-    V --> X
-    W --> X
-    
-    K --> Y[End: Synchronous Result]
-    X --> Z[End: Asynchronous Result<br/>3x Faster!]
-    
-    style A fill:#e1f5fe
+    style A fill:#ffebee
     style C fill:#ffebee
     style D fill:#e8f5e8
-    style K fill:#ffebee
-    style X fill:#e8f5e8
-    style Y fill:#f3e5f5
-    style Z fill:#e8f5e8
+    style F fill:#e8f5e8
+```
+
+#### **B. Async Function Structure**
+```mermaid
+flowchart TD
+    A[async def function] --> B[await operation]
+    B --> C[asyncio.run()]
+    C --> D[Concurrent execution]
+    
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#e8f5e8
+    style D fill:#e8f5e8
+```
+
+#### **C. Performance Comparison**
+```mermaid
+flowchart LR
+    A[3 Tasks] --> B[Sync: 3s]
+    A --> C[Async: 1s]
+    C --> D[3x Faster!]
+    
+    style A fill:#e1f5fe
+    style B fill:#ffebee
+    style C fill:#e8f5e8
+    style D fill:#e8f5e8
 ```
 
 ### **3. Data Validation Flow**
 
+#### **A. Validation Process**
 ```mermaid
 flowchart TD
-    A[Start: Data Input] --> B[Receive User Data]
-    B --> C{Validation Method?}
-    
-    C -->|Dataclass| D[Create Dataclass Instance]
-    C -->|Pydantic| E[Create Pydantic Model]
-    C -->|Custom| F[Custom Validation Function]
-    
-    D --> G[__post_init__ Method]
-    G --> H[Validate Name]
-    G --> I[Validate Email]
-    G --> J[Validate Age]
-    
-    E --> K[Field Validation]
-    K --> L[Type Validation]
-    K --> M[Format Validation]
-    K --> N[Range Validation]
-    
-    F --> O[Manual Validation Logic]
-    O --> P[Check Each Field]
-    
-    H --> Q{Name Valid?}
-    I --> R{Email Valid?}
-    J --> S{Age Valid?}
-    
-    L --> T{Type Correct?}
-    M --> U{Format Correct?}
-    N --> V{Range Correct?}
-    
-    P --> W{All Fields Valid?}
-    
-    Q -->|No| X[Raise ValueError:<br/>Name too short]
-    R -->|No| Y[Raise ValueError:<br/>Invalid email format]
-    S -->|No| Z[Raise ValueError:<br/>Age out of range]
-    
-    T -->|No| AA[Raise ValidationError:<br/>Wrong type]
-    U -->|No| BB[Raise ValidationError:<br/>Wrong format]
-    V -->|No| CC[Raise ValidationError:<br/>Out of range]
-    
-    W -->|No| DD[Raise CustomError:<br/>Validation failed]
-    
-    Q -->|Yes| EE[Continue Validation]
-    R -->|Yes| EE
-    S -->|Yes| EE
-    
-    T -->|Yes| FF[Continue Validation]
-    U -->|Yes| FF
-    V -->|Yes| FF
-    
-    W -->|Yes| GG[Validation Complete]
-    
-    EE --> GG
-    FF --> GG
-    
-    X --> HH[Display Error Message]
-    Y --> HH
-    Z --> HH
-    AA --> HH
-    BB --> HH
-    CC --> HH
-    DD --> HH
-    
-    GG --> II[Data Validated Successfully]
-    HH --> JJ[End: Validation Failed]
-    II --> KK[End: Validation Passed]
+    A[Input Data] --> B[Check Format]
+    B --> C{Valid?}
+    C -->|Yes| D[✅ Success]
+    C -->|No| E[❌ Error Message]
     
     style A fill:#e1f5fe
-    style GG fill:#e8f5e8
-    style HH fill:#ffebee
-    style II fill:#e8f5e8
-    style JJ fill:#ffebee
-    style KK fill:#e8f5e8
+    style D fill:#e8f5e8
+    style E fill:#ffebee
+```
+
+#### **B. Validation Methods**
+```mermaid
+flowchart LR
+    A[Data] --> B[Dataclass]
+    A --> C[Pydantic]
+    A --> D[Custom]
+    
+    B --> E[__post_init__]
+    C --> F[Field Validation]
+    D --> G[Manual Checks]
+    
+    style A fill:#e1f5fe
+    style E fill:#fff3e0
+    style F fill:#fff3e0
+    style G fill:#fff3e0
+```
+
+#### **C. Common Validations**
+```mermaid
+flowchart TD
+    A[User Input] --> B[Name: 2+ chars]
+    A --> C[Email: valid format]
+    A --> D[Age: 0-150]
+    
+    B --> E{All Valid?}
+    C --> E
+    D --> E
+    
+    E -->|Yes| F[✅ Create User]
+    E -->|No| G[❌ Show Error]
+    
+    style A fill:#e1f5fe
+    style F fill:#e8f5e8
+    style G fill:#ffebee
 ```
 
 ### **4. Object-Oriented Programming Flow**
 
+#### **A. Class Structure**
 ```mermaid
 flowchart TD
-    A[Start: OOP Design] --> B[Define Class Blueprint]
-    B --> C[Class: Book]
+    A[Class: Book] --> B[Attributes<br/>title, author, pages]
+    A --> C[Methods<br/>check_out, return_book]
     
-    C --> D[Attributes:<br/>title, author, pages, is_checked_out]
-    C --> E[Methods:<br/>check_out, return_book, get_info]
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#fff3e0
+```
+
+#### **B. Object Creation**
+```mermaid
+flowchart LR
+    A[Class Blueprint] --> B[Create Object]
+    B --> C[book1 = Book(...)]
+    C --> D[Use Methods]
     
-    D --> F[Initialize Object<br/>__init__ method]
-    E --> G[Define Object Behavior]
+    style A fill:#e1f5fe
+    style B fill:#e8f5e8
+    style C fill:#e8f5e8
+    style D fill:#e8f5e8
+```
+
+#### **C. Method Usage**
+```mermaid
+flowchart TD
+    A[book.check_out()] --> B{Already checked out?}
+    B -->|No| C[✅ Check out book]
+    B -->|Yes| D[❌ Already checked out]
     
-    F --> H[Create Book Instance<br/>book1 = Book(...)]
-    G --> I[Object Methods Available]
+    style A fill:#e1f5fe
+    style C fill:#e8f5e8
+    style D fill:#ffebee
+```
+
+### **5. Performance Optimization and Caching Flow**
+
+#### **A. Algorithm Comparison**
+```mermaid
+flowchart LR
+    A[Same Problem] --> B[Recursive<br/>Slow]
+    A --> C[Iterative<br/>Fast]
     
-    H --> J[Object Created Successfully]
-    I --> K[Methods Can Be Called]
-    
-    J --> L[Use Object Methods]
-    K --> L
-    
-    L --> M{Method Called?}
-    M -->|check_out| N[Check if already checked out]
-    M -->|return_book| O[Check if currently checked out]
-    M -->|get_info| P[Return book information]
-    
-    N --> Q{Already checked out?}
-    Q -->|Yes| R[Return: Already checked out]
-    Q -->|No| S[Set is_checked_out = True<br/>Return: Successfully checked out]
-    
-    O --> T{Currently checked out?}
-    T -->|No| U[Return: Not checked out]
-    T -->|Yes| V[Set is_checked_out = False<br/>Return: Successfully returned]
-    
-    P --> W[Format book info with status]
-    
-    R --> X[Display Result]
-    S --> X
-    U --> X
-    V --> X
-    W --> X
-    
-    X --> Y{More Operations?}
-    Y -->|Yes| L
-    Y -->|No| Z[End: OOP Operations Complete]
+    style A fill:#e1f5fe
+    style B fill:#ffebee
+    style C fill:#e8f5e8
+```
+
+#### **B. Caching Process**
+```mermaid
+flowchart TD
+    A[Function Call] --> B{In Cache?}
+    B -->|Yes| C[⚡ Return Cached Result]
+    B -->|No| D[Calculate Result]
+    D --> E[Store in Cache]
+    E --> F[Return Result]
     
     style A fill:#e1f5fe
     style C fill:#e8f5e8
     style D fill:#fff3e0
     style E fill:#fff3e0
-    style J fill:#e8f5e8
-    style S fill:#e8f5e8
-    style V fill:#e8f5e8
-    style Z fill:#f3e5f5
+    style F fill:#e8f5e8
 ```
 
-### **5. Performance Optimization and Caching Flow**
-
+#### **C. Performance Improvement**
 ```mermaid
-flowchart TD
-    A[Start: Performance Problem] --> B{What needs optimization?}
+flowchart LR
+    A[First Call] --> B[Calculate: 1s]
+    C[Second Call] --> D[Cache Hit: 0.001s]
     
-    B -->|Algorithm| C[Algorithm Optimization]
-    B -->|Repeated Calculations| D[Caching Strategy]
-    B -->|Memory Usage| E[Memory Optimization]
-    B -->|I/O Operations| F[I/O Optimization]
-    
-    C --> G[Compare Approaches]
-    G --> H[Recursive vs Iterative]
-    H --> I[Measure Performance<br/>time.time()]
-    I --> J{Which is faster?}
-    J -->|Iterative| K[Use Iterative Approach]
-    J -->|Recursive| L[Use Recursive Approach]
-    
-    D --> M[Implement Caching]
-    M --> N[Use @functools.lru_cache]
-    N --> O[Function Call]
-    O --> P{Result in cache?}
-    P -->|Yes - Cache Hit| Q[Return cached result<br/>Very Fast!]
-    P -->|No - Cache Miss| R[Calculate result]
-    R --> S[Store in cache]
-    S --> T[Return result]
-    
-    E --> U[Optimize Memory Usage]
-    U --> V[Use generators instead of lists]
-    V --> W[Process data in chunks]
-    
-    F --> X[Reduce I/O Operations]
-    X --> Y[Batch file operations]
-    Y --> Z[Use async I/O]
-    
-    K --> AA[Performance Improved]
-    L --> AA
-    Q --> AA
-    T --> AA
-    W --> AA
-    Z --> AA
-    
-    AA --> BB{More optimization needed?}
-    BB -->|Yes| B
-    BB -->|No| CC[End: Optimized Solution]
+    B --> E[1000x Faster!]
+    D --> E
     
     style A fill:#e1f5fe
-    style Q fill:#e8f5e8
-    style R fill:#fff3e0
-    style AA fill:#e8f5e8
-    style CC fill:#f3e5f5
+    style C fill:#e1f5fe
+    style B fill:#fff3e0
+    style D fill:#e8f5e8
+    style E fill:#e8f5e8
 ```
