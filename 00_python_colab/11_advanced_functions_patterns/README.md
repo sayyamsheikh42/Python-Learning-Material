@@ -762,7 +762,7 @@ flowchart TD
     I --> L
     K --> L
     
-    L --> M[📞 next() Called]
+    L --> M["📞 next() Called"]
     M --> N[🔍 Check for More Items]
     N -->|Yes| O[📊 Return Next Value]
     N -->|No| P[🛑 StopIteration Raised]
