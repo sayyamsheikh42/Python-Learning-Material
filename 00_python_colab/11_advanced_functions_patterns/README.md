@@ -755,7 +755,7 @@ flowchart TD
     D --> H[🔧 Use yield Keyword]
     H --> I[⚡ Generator Object Created]
     
-    E --> J[📝 (expression for item in iterable)]
+    E --> J["📝 Generator Expression<br/>expression for item in iterable"]
     J --> K[🔧 Generator Object Created]
     
     G --> L[🔄 Iteration Process]
@@ -948,7 +948,7 @@ Generator approach:
 ```mermaid
 flowchart TD
     A[🚀 Start: with Statement] --> B[🔧 Context Manager Created]
-    B --> C[📞 __enter__() Called]
+    B --> C["📞 __enter__() Called"]
     C --> D[🔧 Setup Resources]
     D --> E[📊 Return Resource/Object]
     E --> F[🎯 Execute Code Block]
@@ -957,8 +957,8 @@ flowchart TD
     G -->|No| H[✅ Normal Completion]
     G -->|Yes| I[❌ Exception Raised]
     
-    H --> J[📞 __exit__(None, None, None)]
-    I --> K[📞 __exit__(exc_type, exc_val, exc_tb)]
+    H --> J["📞 __exit__(None, None, None)"]
+    I --> K["📞 __exit__(exc_type, exc_val, exc_tb)"]
     
     J --> L[🧹 Cleanup Resources]
     K --> M[🧹 Cleanup Resources]
@@ -973,7 +973,7 @@ flowchart TD
     
     T[🏭 Context Manager Types] --> U[📁 Built-in: File Operations]
     T --> V[🎛️ Custom: Class-based]
-    T --> W[🔧 Decorator: @contextmanager]
+    T --> W["🔧 Decorator: @contextmanager"]
     
     style A fill:#e1f5fe
     style C fill:#fff3e0
