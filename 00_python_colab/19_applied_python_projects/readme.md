@@ -50,7 +50,7 @@ flowchart LR
 #### **B. Safe File Handling**
 ```mermaid
 flowchart TD
-    A[Start] --> B[Use with open()]
+    A[Start] --> B["Use with open()"]
     B --> C[File Operations]
     C --> D[Auto Close]
     D --> E[End]
@@ -65,10 +65,10 @@ flowchart TD
 #### **C. Text Processing Steps**
 ```mermaid
 flowchart LR
-    A[Raw Text] --> B[Clean Text<br/>.strip()]
-    B --> C[Split Text<br/>.split()]
+    A[Raw Text] --> B["Clean Text<br/>.strip()"]
+    B --> C["Split Text<br/>.split()"]
     C --> D[Extract Data]
-    D --> E[Analyze<br/>Counter]
+    D --> E["Analyze<br/>Counter"]
     
     style A fill:#e1f5fe
     style B fill:#fff3e0
@@ -98,7 +98,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     A[async def function] --> B[await operation]
-    B --> C[asyncio.run()]
+    B --> C["asyncio.run()"]
     C --> D[Concurrent execution]
     
     style A fill:#e1f5fe
@@ -188,7 +188,7 @@ flowchart TD
 ```mermaid
 flowchart LR
     A[Class Blueprint] --> B[Create Object]
-    B --> C[book1 = Book(...)]
+    B --> C["book1 = Book(...)"]
     C --> D[Use Methods]
     
     style A fill:#e1f5fe
@@ -200,7 +200,7 @@ flowchart LR
 #### **C. Method Usage**
 ```mermaid
 flowchart TD
-    A[book.check_out()] --> B{Already checked out?}
+    A[book.check_out] --> B{Already checked out?}
     B -->|No| C[✅ Check out book]
     B -->|Yes| D[❌ Already checked out]
     
