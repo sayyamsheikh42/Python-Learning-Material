@@ -733,43 +733,33 @@ This lesson covered the fundamental building blocks of Python programming:
 ### Key Concepts Covered
 
 ```mermaid
-graph TD
-    A["Python Fundamentals"] --> B["Operators"]
-    A --> C["Keywords"]
-    A --> D["Variables"]
-    
-    B --> B1["Unary Operators"]
-    B --> B2["Binary Operators"]
-    B --> B3["Special Operators"]
-    
-    B1 --> B1A["Negative (-)"]
-    B1 --> B1B["Logical NOT (not)"]
-    B1 --> B1C["Bitwise NOT (~)"]
-    
-    B2 --> B2A["Arithmetic (+, -, *, /, //, %, **)"]
-    B2 --> B2B["Comparison (==, !=, <, >, <=, >=)"]
-    B2 --> B2C["Logical (and, or, not)"]
-    B2 --> B2D["Assignment (=, +=, -=, etc.)"]
-    
-    B3 --> B3A["Identity (is, is not)"]
-    B3 --> B3B["Membership (in, not in)"]
-    B3 --> B3C["Walrus (:=)"]
-    
-    C --> C1["Control Flow"]
-    C --> C2["Data Types"]
-    C --> C3["Functions & Classes"]
-    C --> C4["Exception Handling"]
-    
-    D --> D1["Naming Rules"]
-    D --> D2["Conventions"]
-    D --> D3["Assignment"]
-    D --> D4["Type Hints"]
-    D --> D5["Deletion"]
-    
-    style A fill:#ff9999
-    style B fill:#99ccff
-    style C fill:#99ff99
-    style D fill:#ffcc99
+mindmap
+  root((Python Fundamentals))
+    Operators
+      Unary
+        Negative
+        Logical NOT
+        Bitwise NOT
+      Binary
+        Arithmetic
+        Comparison
+        Logical
+        Assignment
+      Special
+        Identity
+        Membership
+        Walrus
+    Keywords
+      Control Flow
+      Data Types
+      Functions & Classes
+      Exception Handling
+    Variables
+      Naming Rules
+      Conventions
+      Assignment
+      Type Hints
+      Deletion
 ```
 
 **Diagram Explanation**: This mind map provides a comprehensive overview of all the topics covered in this lesson. It shows the hierarchical relationship between operators, keywords, and variables, making it easy to see how these fundamental concepts interconnect in Python programming.
