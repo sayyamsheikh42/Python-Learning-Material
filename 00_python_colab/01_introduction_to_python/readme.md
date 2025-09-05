@@ -542,26 +542,26 @@ timeline
 ### Type Hinting in Python
 ```mermaid
 graph TD
-    A[Python Type Hints] --> B[Basic Types]
-    A --> C[Complex Types]
-    A --> D[Optional Types]
-    A --> E[Generic Types]
+    A["Python Type Hints"] --> B["Basic Types"]
+    A --> C["Complex Types"]
+    A --> D["Optional Types"]
+    A --> E["Generic Types"]
     
-    B --> B1[int, float, str]
-    B --> B2[bool, bytes]
-    B --> B3[list, dict, tuple]
+    B --> B1["int, float, str"]
+    B --> B2["bool, bytes"]
+    B --> B3["list, dict, tuple"]
     
-    C --> C1[Union types]
-    C --> C2[Optional types]
-    C --> C3[Callable types]
+    C --> C1["Union types"]
+    C --> C2["Optional types"]
+    C --> C3["Callable types"]
     
-    D --> D1[Optional[str]]
-    D --> D2[Union[int, None]]
-    D --> D3[Default values]
+    D --> D1["Optional[str]"]
+    D --> D2["Union[int, None]"]
+    D --> D3["Default values"]
     
-    E --> E1[List[int]]
-    E --> E2[Dict[str, int]]
-    E --> E3[TypeVar]
+    E --> E1["List[int]"]
+    E --> E2["Dict[str, int]"]
+    E --> E3["TypeVar"]
     
     style A fill:#ff9999
     style B fill:#99ccff
