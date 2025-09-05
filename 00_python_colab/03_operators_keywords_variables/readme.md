@@ -737,29 +737,29 @@ mindmap
   root((Python Fundamentals))
     Operators
       Unary
-        Negative (-)
-        Logical NOT (not)
-        Bitwise NOT (~)
+        "Negative (-)"
+        "Logical NOT (not)"
+        "Bitwise NOT (~)"
       Binary
-        Arithmetic (+, -, *, /, //, %, **)
-        Comparison (==, !=, <, >, <=, >=)
-        Logical (and, or, not)
-        Assignment (=, +=, -=, etc.)
+        "Arithmetic (+, -, *, /, //, %, **)"
+        "Comparison (==, !=, <, >, <=, >=)"
+        "Logical (and, or, not)"
+        "Assignment (=, +=, -=, etc.)"
       Special
-        Identity (is, is not)
-        Membership (in, not in)
-        Walrus (:=)
+        "Identity (is, is not)"
+        "Membership (in, not in)"
+        "Walrus (:=)"
     Keywords
-      Control Flow
-      Data Types
-      Functions & Classes
-      Exception Handling
+      "Control Flow"
+      "Data Types"
+      "Functions & Classes"
+      "Exception Handling"
     Variables
-      Naming Rules
-      Conventions
-      Assignment
-      Type Hints
-      Deletion
+      "Naming Rules"
+      "Conventions"
+      "Assignment"
+      "Type Hints"
+      "Deletion"
 ```
 
 **Diagram Explanation**: This mind map provides a comprehensive overview of all the topics covered in this lesson. It shows the hierarchical relationship between operators, keywords, and variables, making it easy to see how these fundamental concepts interconnect in Python programming.
