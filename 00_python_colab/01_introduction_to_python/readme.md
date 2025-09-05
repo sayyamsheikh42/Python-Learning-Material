@@ -239,8 +239,8 @@ graph LR
     F --> F3[Streaming Services]
     
     G --> R1[Scientific Computing]
-    R --> R2[Data Analysis]
-    R --> R3[Simulation]
+    R1 --> R2[Data Analysis]
+    R1 --> R3[Simulation]
     
     style A fill:#ff9999
     style B fill:#99ccff
