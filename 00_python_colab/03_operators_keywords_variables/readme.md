@@ -736,78 +736,31 @@ This lesson covered the fundamental building blocks of Python programming:
 mindmap
   root((Python Fundamentals))
     Operators
-      Unary Operators
-        Negative Operator
+      Unary
+        Negative
         Logical NOT
         Bitwise NOT
-      Binary Operators
+      Binary
         Arithmetic
-          Addition
-          Subtraction
-          Multiplication
-          Division
-          Floor Division
-          Modulus
-          Exponentiation
         Comparison
-          Equal
-          Not Equal
-          Less Than
-          Greater Than
-          Less or Equal
-          Greater or Equal
         Logical
-          AND
-          OR
-          NOT
         Assignment
-          Simple Assignment
-          Compound Assignment
-      Special Operators
+      Special
         Identity
-          is
-          is not
         Membership
-          in
-          not in
         Walrus
-          Assignment Expression
     Keywords
       Control Flow
-        if elif else
-        for while
-        break continue
-        pass
       Data Types
-        True False
-        None
-      Functions & Classes
-        def class
-        return yield
-        lambda
-      Exception Handling
-        try except
-        finally raise
-        assert
-      Import & Modules
-        import from
-        as
+      Functions
+      Exceptions
+      Import
     Variables
       Naming Rules
-        Must start with letter or underscore
-        Can contain letters numbers underscores
-        Cannot be keywords
-        Case sensitive
       Conventions
-        snake_case for variables
-        CamelCase for classes
-        UPPER_CASE for constants
-        Private variables with underscore
-      Operations
-        Simple Assignment
-        Multiple Assignment
-        Type Hints
-        Variable Deletion
+      Assignment
+      Type Hints
+      Deletion
 ```
 
 **Diagram Explanation**: This mind map provides a comprehensive overview of all the topics covered in this lesson. It shows the hierarchical relationship between operators, keywords, and variables, making it easy to see how these fundamental concepts interconnect in Python programming.
