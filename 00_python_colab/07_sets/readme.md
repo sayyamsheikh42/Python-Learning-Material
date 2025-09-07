@@ -664,7 +664,7 @@ mindmap
       Internal Working
         Hashing
         Hash tables
-        O(1) complexity
+        O1 complexity
         Rehashing
     Frozensets
       Characteristics
