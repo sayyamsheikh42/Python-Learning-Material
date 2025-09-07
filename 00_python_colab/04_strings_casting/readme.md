@@ -115,17 +115,17 @@ graph LR
     A["Escape Sequences"] --> B["Common Sequences"]
     A --> C["Unicode Sequences"]
     
-    B --> B1["New Line - \\n"]
-    B --> B2["Tab - \\t"]
-    B --> B3["Backspace - \\b"]
-    B --> B4["Carriage Return - \\r"]
-    B --> B5["Single Quote - \\'"]
-    B --> B6["Double Quote - \\\""]
-    B --> B7["Backslash - \\\\"]
+    B --> B1["New Line"]
+    B --> B2["Tab"]
+    B --> B3["Backspace"]
+    B --> B4["Carriage Return"]
+    B --> B5["Single Quote"]
+    B --> B6["Double Quote"]
+    B --> B7["Backslash"]
     
-    C --> C1["Unicode A - \\u0041"]
-    C --> C2["Unicode B - \\u0042"]
-    C --> C3["Unicode C - \\u0043"]
+    C --> C1["Unicode A"]
+    C --> C2["Unicode B"]
+    C --> C3["Unicode C"]
 ```
 
 **Diagram Explanation**: This diagram categorizes escape sequences into common sequences (for formatting and special characters) and Unicode sequences (for international characters).
