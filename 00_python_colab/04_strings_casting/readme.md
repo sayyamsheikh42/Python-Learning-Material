@@ -115,17 +115,17 @@ graph LR
     A["Escape Sequences"] --> B["Common Sequences"]
     A --> C["Unicode Sequences"]
     
-    B --> B1["\\n - New Line"]
-    B --> B2["\\t - Tab"]
-    B --> B3["\\b - Backspace"]
-    B --> B4["\\r - Carriage Return"]
-    B --> B5["\\' - Single Quote"]
-    B --> B6["\\\" - Double Quote"]
-    B --> B7["\\\\ - Backslash"]
+    B --> B1["New Line - \\n"]
+    B --> B2["Tab - \\t"]
+    B --> B3["Backspace - \\b"]
+    B --> B4["Carriage Return - \\r"]
+    B --> B5["Single Quote - \\'"]
+    B --> B6["Double Quote - \\\""]
+    B --> B7["Backslash - \\\\"]
     
-    C --> C1["\\u0041 - Unicode A"]
-    C --> C2["\\u0042 - Unicode B"]
-    C --> C3["\\u0043 - Unicode C"]
+    C --> C1["Unicode A - \\u0041"]
+    C --> C2["Unicode B - \\u0042"]
+    C --> C3["Unicode C - \\u0043"]
 ```
 
 **Diagram Explanation**: This diagram categorizes escape sequences into common sequences (for formatting and special characters) and Unicode sequences (for international characters).
@@ -230,33 +230,33 @@ Python provides numerous built-in methods for string manipulation, making text p
 mindmap
   root((String Methods))
     Text Manipulation
-      split()
+      split
         Divides string into list
         Based on delimiter
-      join()
+      join
         Combines list into string
         Uses separator
-      replace()
+      replace
         Substitutes substrings
         Case sensitive
     Search Operations
-      find()
+      find
         Returns first index
         Returns -1 if not found
-      index()
+      index
         Returns first index
         Raises error if not found
-      count()
+      count
         Counts occurrences
         Case sensitive
     Validation
-      startswith()
+      startswith
         Checks prefix
-      endswith()
+      endswith
         Checks suffix
-      isdigit()
+      isdigit
         Checks if numeric
-      isalpha()
+      isalpha
         Checks if alphabetic
 ```
 
@@ -608,9 +608,9 @@ mindmap
     Explicit Casting
       Manual conversion
       Built-in functions
-      int() float() str()
-      bool() list() tuple()
-      set() dict() complex()
+      int float str
+      bool list tuple
+      set dict complex
     Conversion Rules
       Safe conversions
       Data loss prevention
@@ -851,9 +851,9 @@ mindmap
         Slicing
         Length
       Methods
-        split() join()
-        replace() find()
-        count() format()
+        split join
+        replace find
+        count format
       Memory Management
         String interning
         Literal pools
