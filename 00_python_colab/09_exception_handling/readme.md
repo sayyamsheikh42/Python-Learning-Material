@@ -458,28 +458,19 @@ Here's a comprehensive example that combines all four exception handling blocks 
 ### Complete Exception Handling Flow
 
 ```mermaid
-sequenceDiagram
-    participant Program
-    participant Try
-    participant Except
-    participant Else
-    participant Finally
+flowchart TD
+    A["Start"] --> B["try Block"]
+    B --> C{"Error Occurs?"}
+    C -->|No| D["else Block"]
+    C -->|Yes| E["except Block"]
+    D --> F["finally Block"]
+    E --> F
+    F --> G["Continue Program"]
     
-    Program->>Try: Execute try block
-    Try->>Try: Perform operation
-    
-    alt Operation Successful
-        Try->>Else: No exception raised
-        Else->>Else: Execute success logic
-        Else->>Finally: Continue to finally
-    else Operation Failed
-        Try->>Except: Exception raised
-        Except->>Except: Handle exception
-        Except->>Finally: Continue to finally
-    end
-    
-    Finally->>Finally: Execute cleanup
-    Finally->>Program: Return control
+    style B fill:#e1f5fe
+    style E fill:#ffebee
+    style D fill:#e8f5e8
+    style F fill:#fff3e0
 ```
 
 **Diagram Explanation**: This sequence diagram shows the complete flow of exception handling, illustrating how the program flows through try, except, else, and finally blocks based on the operation outcome.
