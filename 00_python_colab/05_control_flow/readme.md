@@ -62,9 +62,9 @@ mindmap
       != Not equal to
     Relational
       > Greater than
-      < Less than
+      &lt; Less than
       >= Greater or equal
-      <= Less or equal
+      &lt;= Less or equal
     Usage
       Conditional statements
       Loop conditions
