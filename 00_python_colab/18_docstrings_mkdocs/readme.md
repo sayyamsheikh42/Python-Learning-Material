@@ -1471,9 +1471,6 @@ print(result)
 
 ---
 
-*Need help? Check out our [FAQ](guide/faq.md) or [contact us](mailto:support@example.com).*
-```
-
 ## Writing Content with MkDocs
 
 MkDocs uses Markdown for content creation, making it easy to write and maintain documentation.
@@ -1486,6 +1483,26 @@ graph TD
     A --> C[Extended Features]
     A --> D[Code Highlighting]
     A --> E[Admonitions]
+    
+    B --> B1[Headers]
+    B --> B2[Lists]
+    B --> B3[Links]
+    B --> B4[Images]
+    
+    C --> C1[Tables]
+    C --> C2[Footnotes]
+    C --> C3[Definition Lists]
+    C --> C4[Abbreviations]
+    
+    D --> D1[Syntax Highlighting]
+    D --> D2[Line Numbers]
+    D --> D3[Code Blocks]
+    D --> D4[Inline Code]
+    
+    E --> E1[Notes]
+    E --> E2[Warnings]
+    E --> E3[Tips]
+    E --> E4[Danger]
 ```
 
 **Diagram Explanation**: This diagram illustrates the comprehensive Markdown capabilities available in MkDocs, organized into four main categories:
