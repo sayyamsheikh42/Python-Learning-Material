@@ -35,28 +35,24 @@ Documentation is the bridge between your code and its users. It's not just about
 
 ```mermaid
 graph TD
-    A["Documentation"] --> B["Inline Documentation"]
-    A --> C["External Documentation"]
+    A[Documentation] --> B[Inline Documentation]
+    A --> C[External Documentation]
     
-    B --> B1["Docstrings"]
-    B --> B2["Comments"]
-    B --> B3["Type Hints"]
+    B --> B1[Docstrings]
+    B --> B2[Comments]
+    B --> B3[Type Hints]
     
-    C --> C1["MkDocs"]
-    C --> C2["Sphinx"]
-    C --> C3["GitBook"]
+    C --> C1[MkDocs]
+    C --> C2[Sphinx]
+    C --> C3[GitBook]
     
-    B1 --> B1a["Function Docstrings"]
-    B1 --> B1b["Class Docstrings"]
-    B1 --> B1c["Module Docstrings"]
+    B1 --> B1a[Function Docstrings]
+    B1 --> B1b[Class Docstrings]
+    B1 --> B1c[Module Docstrings]
     
-    C1 --> C1a["Static Site Generator"]
-    C1 --> C1b["Markdown Based"]
-    C1 --> C1c["Easy Deployment"]
-    
-    style A fill:#e1f5fe
-    style B1 fill:#e8f5e8
-    style C1 fill:#f3e5f5
+    C1 --> C1a[Static Site Generator]
+    C1 --> C1b[Markdown Based]
+    C1 --> C1c[Easy Deployment]
 ```
 
 **Diagram Explanation**: This diagram shows the two main types of documentation in Python: inline documentation (docstrings) and external documentation (MkDocs), along with their key characteristics.
@@ -86,27 +82,22 @@ Docstrings are string literals that appear as the first statement in a function,
 
 ```mermaid
 graph TD
-    A["Docstring"] --> B["Purpose"]
-    A --> C["Location"]
-    A --> D["Access"]
+    A[Docstring] --> B[Purpose]
+    A --> C[Location]
+    A --> D[Access]
     
-    B --> B1["Explain Functionality"]
-    B --> B2["Document Parameters"]
-    B --> B3["Show Examples"]
-    B --> B4["Specify Return Values"]
+    B --> B1[Explain Functionality]
+    B --> B2[Document Parameters]
+    B --> B3[Show Examples]
+    B --> B4[Specify Return Values]
     
-    C --> C1["First Statement"]
-    C --> C2["Triple Quotes"]
-    C --> C3["Multi-line String"]
+    C --> C1[First Statement]
+    C --> C2[Triple Quotes]
+    C --> C3[Multi-line String]
     
-    D --> D1["help() Function"]
-    D --> D2["__doc__ Attribute"]
-    D --> D3["IDE Integration"]
-    
-    style A fill:#e8f5e8
-    style B1 fill:#c8e6c9
-    style C1 fill:#bbdefb
-    style D1 fill:#fff3e0
+    D --> D1[help Function]
+    D --> D2[__doc__ Attribute]
+    D --> D3[IDE Integration]
 ```
 
 **Diagram Explanation**: This diagram shows the key aspects of docstrings: their purpose, location in code, and how to access them.
@@ -148,26 +139,21 @@ help(greet)
 
 ```mermaid
 graph TD
-    A["Code Documentation"] --> B["Docstrings"]
-    A --> C["Comments"]
+    A[Code Documentation] --> B[Docstrings]
+    A --> C[Comments]
     
-    B --> B1["Triple Quotes"]
-    B --> B2["First Statement"]
-    B --> B3["Accessible via help()"]
-    B --> B4["Used by Tools"]
+    B --> B1[Triple Quotes]
+    B --> B2[First Statement]
+    B --> B3[Accessible via help]
+    B --> B4[Used by Tools]
     
-    C --> C1["# Symbol"]
-    C --> C2["Anywhere in Code"]
-    C --> C3["Not Accessible"]
-    C --> C4["For Developers Only"]
+    C --> C1[# Symbol]
+    C --> C2[Anywhere in Code]
+    C --> C3[Not Accessible]
+    C --> C4[For Developers Only]
     
-    D["When to Use"] --> D1["Docstrings: Public API"]
-    D --> D2["Comments: Implementation Details"]
-    
-    style B fill:#e8f5e8
-    style C fill:#ffcdd2
-    style D1 fill:#c8e6c9
-    style D2 fill:#ffab91
+    D[When to Use] --> D1[Docstrings: Public API]
+    D --> D2[Comments: Implementation Details]
 ```
 
 **Diagram Explanation**: This diagram shows the differences between docstrings and comments, and when to use each.
@@ -180,31 +166,26 @@ Python supports several docstring formats, each with its own conventions and adv
 
 ```mermaid
 graph TD
-    A["Docstring Formats"] --> B["Google Style"]
-    A --> C["NumPy Style"]
-    A --> D["reST Style"]
-    A --> E["Plain Text"]
+    A[Docstring Formats] --> B[Google Style]
+    A --> C[NumPy Style]
+    A --> D[reST Style]
+    A --> E[Plain Text]
     
-    B --> B1["Popular in Open Source"]
-    B --> B2["Clean and Readable"]
-    B --> B3["Google Style Guide"]
+    B --> B1[Popular in Open Source]
+    B --> B2[Clean and Readable]
+    B --> B3[Google Style Guide]
     
-    C --> C1["Scientific Python"]
-    C --> C2["NumPy Documentation"]
-    C --> C3["Detailed Sections"]
+    C --> C1[Scientific Python]
+    C --> C2[NumPy Documentation]
+    C --> C3[Detailed Sections]
     
-    D --> D1["Official Python Docs"]
-    D --> D2["Sphinx Compatible"]
-    D --> D3["PEP 287 Standard"]
+    D --> D1[Official Python Docs]
+    D --> D2[Sphinx Compatible]
+    D --> D3[PEP 287 Standard]
     
-    E --> E1["Simple and Direct"]
-    E --> E2["No Special Formatting"]
-    E --> E3["Quick Documentation"]
-    
-    style B fill:#e8f5e8
-    style C fill:#e3f2fd
-    style D fill:#f3e5f5
-    style E fill:#fff3e0
+    E --> E1[Simple and Direct]
+    E --> E2[No Special Formatting]
+    E --> E3[Quick Documentation]
 ```
 
 **Diagram Explanation**: This diagram shows the different docstring formats available in Python and their characteristics.
@@ -353,39 +334,33 @@ Docstrings can be used in various places in your Python code. Each location serv
 
 ```mermaid
 graph TD
-    A["Docstring Locations"] --> B["Functions"]
-    A --> C["Methods"]
-    A --> D["Classes"]
-    A --> E["Modules"]
-    A --> F["Packages"]
+    A[Docstring Locations] --> B[Functions]
+    A --> C[Methods]
+    A --> D[Classes]
+    A --> E[Modules]
+    A --> F[Packages]
     
-    B --> B1["Function Purpose"]
-    B --> B2["Parameters"]
-    B --> B3["Return Values"]
-    B --> B4["Examples"]
+    B --> B1[Function Purpose]
+    B --> B2[Parameters]
+    B --> B3[Return Values]
+    B --> B4[Examples]
     
-    C --> C1["Method Behavior"]
-    C --> C2["Instance Variables"]
-    C --> C3["Side Effects"]
+    C --> C1[Method Behavior]
+    C --> C2[Instance Variables]
+    C --> C3[Side Effects]
     
-    D --> D1["Class Purpose"]
-    D --> D2["Attributes"]
-    D --> D3["Methods Overview"]
-    D --> D4["Usage Examples"]
+    D --> D1[Class Purpose]
+    D --> D2[Attributes]
+    D --> D3[Methods Overview]
+    D --> D4[Usage Examples]
     
-    E --> E1["Module Purpose"]
-    E --> E2["Functions List"]
-    E --> E3["Dependencies"]
+    E --> E1[Module Purpose]
+    E --> E2[Functions List]
+    E --> E3[Dependencies]
     
-    F --> F1["Package Overview"]
-    F --> F2["Submodules"]
-    F --> F3["Installation"]
-    
-    style B fill:#e8f5e8
-    style C fill:#e3f2fd
-    style D fill:#f3e5f5
-    style E fill:#fff3e0
-    style F fill:#fce4ec
+    F --> F1[Package Overview]
+    F --> F2[Submodules]
+    F --> F3[Installation]
 ```
 
 **Diagram Explanation**: This diagram shows where docstrings can be used in Python code and what each location should document.
@@ -624,31 +599,26 @@ There are several ways to access and view docstrings in Python. Understanding th
 
 ```mermaid
 graph TD
-    A["Accessing Docstrings"] --> B["help() Function"]
-    A --> C["__doc__ Attribute"]
-    A --> D["IDE Integration"]
-    A --> E["Documentation Tools"]
+    A[Accessing Docstrings] --> B[help Function]
+    A --> C[__doc__ Attribute]
+    A --> D[IDE Integration]
+    A --> E[Documentation Tools]
     
-    B --> B1["Interactive Help"]
-    B --> B2["Formatted Output"]
-    B --> B3["Command Line"]
+    B --> B1[Interactive Help]
+    B --> B2[Formatted Output]
+    B --> B3[Command Line]
     
-    C --> C1["Raw String"]
-    C --> C2["Programmatic Access"]
-    C --> C3["String Manipulation"]
+    C --> C1[Raw String]
+    C --> C2[Programmatic Access]
+    C --> C3[String Manipulation]
     
-    D --> D1["Hover Tooltips"]
-    D --> D2["Auto-completion"]
-    D --> D3["Documentation Panels"]
+    D --> D1[Hover Tooltips]
+    D --> D2[Auto-completion]
+    D --> D3[Documentation Panels]
     
-    E --> E1["Sphinx"]
-    E --> E2["MkDocs"]
-    E --> E3["pydoc"]
-    
-    style B fill:#e8f5e8
-    style C fill:#e3f2fd
-    style D fill:#f3e5f5
-    style E fill:#fff3e0
+    E --> E1[Sphinx]
+    E --> E2[MkDocs]
+    E --> E3[pydoc]
 ```
 
 **Diagram Explanation**: This diagram shows the different ways to access docstrings in Python, from interactive help to documentation generation tools.
@@ -899,35 +869,30 @@ Following best practices ensures that your docstrings are effective, consistent,
 
 ```mermaid
 graph TD
-    A["Docstring Best Practices"] --> B["Content Guidelines"]
-    A --> C["Formatting Standards"]
-    A --> D["Structure Rules"]
-    A --> E["Tool Integration"]
+    A[Docstring Best Practices] --> B[Content Guidelines]
+    A --> C[Formatting Standards]
+    A --> D[Structure Rules]
+    A --> E[Tool Integration]
     
-    B --> B1["Clear and Concise"]
-    B --> B2["Complete Information"]
-    B --> B3["Examples and Use Cases"]
-    B --> B4["Error Documentation"]
+    B --> B1[Clear and Concise]
+    B --> B2[Complete Information]
+    B --> B3[Examples and Use Cases]
+    B --> B4[Error Documentation]
     
-    C --> C1["Consistent Format"]
-    C --> C2["Proper Indentation"]
-    C --> C3["Line Length Limits"]
-    C --> C4["Triple Quotes"]
+    C --> C1[Consistent Format]
+    C --> C2[Proper Indentation]
+    C --> C3[Line Length Limits]
+    C --> C4[Triple Quotes]
     
-    D --> D1["Summary Line"]
-    D --> D2["Detailed Description"]
-    D --> D3["Parameter Documentation"]
-    D --> D4["Return Value Documentation"]
+    D --> D1[Summary Line]
+    D --> D2[Detailed Description]
+    D --> D3[Parameter Documentation]
+    D --> D4[Return Value Documentation]
     
-    E --> E1["Sphinx Compatibility"]
-    E --> E2["IDE Support"]
-    E --> E3["Auto-generation"]
-    E --> E4["Testing Integration"]
-    
-    style B fill:#e8f5e8
-    style C fill:#e3f2fd
-    style D fill:#f3e5f5
-    style E fill:#fff3e0
+    E --> E1[Sphinx Compatibility]
+    E --> E2[IDE Support]
+    E --> E3[Auto-generation]
+    E --> E4[Testing Integration]
 ```
 
 **Diagram Explanation**: This diagram shows the key areas of docstring best practices: content guidelines, formatting standards, structure rules, and tool integration.
@@ -1167,31 +1132,26 @@ MkDocs is a static site generator that turns Markdown files into a professional 
 
 ```mermaid
 graph TD
-    A["MkDocs"] --> B["Static Site Generator"]
-    A --> C["Markdown Based"]
-    A --> D["Easy Deployment"]
+    A[MkDocs] --> B[Static Site Generator]
+    A --> C[Markdown Based]
+    A --> D[Easy Deployment]
     
-    B --> B1["Fast Build Times"]
-    B --> B2["No Database Required"]
-    B --> B3["Version Control Friendly"]
+    B --> B1[Fast Build Times]
+    B --> B2[No Database Required]
+    B --> B3[Version Control Friendly]
     
-    C --> C1["Easy to Write"]
-    C --> C2["GitHub Compatible"]
-    C --> C3["Developer Friendly"]
+    C --> C1[Easy to Write]
+    C --> C2[GitHub Compatible]
+    C --> C3[Developer Friendly]
     
-    D --> D1["GitHub Pages"]
-    D --> D2["Netlify"]
-    D --> D3["Self-hosted"]
+    D --> D1[GitHub Pages]
+    D --> D2[Netlify]
+    D --> D3[Self-hosted]
     
-    E["Features"] --> E1["Themes"]
-    E --> E2["Plugins"]
-    E --> E3["Search"]
-    E --> E4["Navigation"]
-    
-    style A fill:#e1f5fe
-    style B fill:#e8f5e8
-    style C fill:#e3f2fd
-    style D fill:#f3e5f5
+    E[Features] --> E1[Themes]
+    E --> E2[Plugins]
+    E --> E3[Search]
+    E --> E4[Navigation]
 ```
 
 **Diagram Explanation**: This diagram shows MkDocs as a static site generator with its key characteristics and features.
@@ -1224,32 +1184,26 @@ Setting up MkDocs is straightforward and can be done in just a few steps.
 
 ```mermaid
 graph TD
-    A["MkDocs Setup"] --> B["Installation"]
-    A --> C["Project Creation"]
-    A --> D["Configuration"]
-    A --> E["Development Server"]
+    A[MkDocs Setup] --> B[Installation]
+    A --> C[Project Creation]
+    A --> D[Configuration]
+    A --> E[Development Server]
     
-    B --> B1["pip install mkdocs"]
-    B --> B2["pip install mkdocs-material"]
-    B --> B3["Verify Installation"]
+    B --> B1[pip install mkdocs]
+    B --> B2[pip install mkdocs-material]
+    B --> B3[Verify Installation]
     
-    C --> C1["mkdocs new project-name"]
-    C --> C2["Directory Structure"]
-    C --> C3["Initial Files"]
+    C --> C1[mkdocs new project-name]
+    C --> C2[Directory Structure]
+    C --> C3[Initial Files]
     
-    D --> D1["mkdocs.yml"]
-    D --> D2["Theme Selection"]
-    D --> D3["Navigation Setup"]
+    D --> D1[mkdocs.yml]
+    D --> D2[Theme Selection]
+    D --> D3[Navigation Setup]
     
-    E --> E1["mkdocs serve"]
-    E --> E2["Local Development"]
-    E --> E3["Live Reload"]
-    
-    style A fill:#e1f5fe
-    style B fill:#e8f5e8
-    style C fill:#e3f2fd
-    style D fill:#f3e5f5
-    style E fill:#fff3e0
+    E --> E1[mkdocs serve]
+    E --> E2[Local Development]
+    E --> E3[Live Reload]
 ```
 
 **Diagram Explanation**: This diagram shows the step-by-step process of setting up MkDocs from installation to running the development server.
@@ -1486,36 +1440,30 @@ MkDocs uses Markdown for content creation, making it easy to write and maintain 
 
 ```mermaid
 graph TD
-    A["MkDocs Markdown"] --> B["Basic Syntax"]
-    A --> C["Extended Features"]
-    A --> D["Code Highlighting"]
-    A --> E["Admonitions"]
+    A[MkDocs Markdown] --> B[Basic Syntax]
+    A --> C[Extended Features]
+    A --> D[Code Highlighting]
+    A --> E[Admonitions]
     
-    B --> B1["Headers"]
-    B --> B2["Lists"]
-    B --> B3["Links"]
-    B --> B4["Images"]
+    B --> B1[Headers]
+    B --> B2[Lists]
+    B --> B3[Links]
+    B --> B4[Images]
     
-    C --> C1["Tables"]
-    C --> C2["Footnotes"]
-    C --> C3["Definition Lists"]
-    C --> C4["Abbreviations"]
+    C --> C1[Tables]
+    C --> C2[Footnotes]
+    C --> C3[Definition Lists]
+    C --> C4[Abbreviations]
     
-    D --> D1["Syntax Highlighting"]
-    D --> D2["Line Numbers"]
-    D --> D3["Code Blocks"]
-    D --> D4["Inline Code"]
+    D --> D1[Syntax Highlighting]
+    D --> D2[Line Numbers]
+    D --> D3[Code Blocks]
+    D --> D4[Inline Code]
     
-    E --> E1["Notes"]
-    E --> E2["Warnings"]
-    E --> E3["Tips"]
-    E --> E4["Danger"]
-    
-    style A fill:#e1f5fe
-    style B fill:#e8f5e8
-    style C fill:#e3f2fd
-    style D fill:#f3e5f5
-    style E fill:#fff3e0
+    E --> E1[Notes]
+    E --> E2[Warnings]
+    E --> E3[Tips]
+    E --> E4[Danger]
 ```
 
 **Diagram Explanation**: This diagram shows the Markdown features available in MkDocs, from basic syntax to advanced features.
@@ -1610,26 +1558,21 @@ print(f"Fibonacci(10) = {result}")
 
 ```mermaid
 graph TD
-    A["MkDocs Navigation"] --> B["Basic Navigation"]
-    A --> C["Multi-level Navigation"]
-    A --> D["Auto-generated Navigation"]
+    A[MkDocs Navigation] --> B[Basic Navigation]
+    A --> C[Multi-level Navigation]
+    A --> D[Auto-generated Navigation]
     
-    B --> B1["Simple List"]
-    B --> B2["Page Titles"]
-    B --> B3["URL Mapping"]
+    B --> B1[Simple List]
+    B --> B2[Page Titles]
+    B --> B3[URL Mapping]
     
-    C --> C1["Nested Structure"]
-    C --> C2["Section Headers"]
-    C --> C3["Sub-pages"]
+    C --> C1[Nested Structure]
+    C --> C2[Section Headers]
+    C --> C3[Sub-pages]
     
-    D --> D1["Awesome Pages Plugin"]
-    D --> D2["File-based Navigation"]
-    D --> D3["Automatic Ordering"]
-    
-    style A fill:#e1f5fe
-    style B fill:#e8f5e8
-    style C fill:#e3f2fd
-    style D fill:#f3e5f5
+    D --> D1[Awesome Pages Plugin]
+    D --> D2[File-based Navigation]
+    D --> D3[Automatic Ordering]
 ```
 
 **Diagram Explanation**: This diagram shows the different navigation options available in MkDocs.
@@ -1663,32 +1606,26 @@ MkDocs supports various themes to customize the appearance of your documentation
 
 ```mermaid
 graph TD
-    A["MkDocs Themes"] --> B["Material"]
-    A --> C["ReadTheDocs"]
-    A --> D["Windmill"]
-    A --> E["Custom Themes"]
+    A[MkDocs Themes] --> B[Material]
+    A --> C[ReadTheDocs]
+    A --> D[Windmill]
+    A --> E[Custom Themes]
     
-    B --> B1["Modern Design"]
-    B --> B2["Dark Mode"]
-    B --> B3["Rich Features"]
+    B --> B1[Modern Design]
+    B --> B2[Dark Mode]
+    B --> B3[Rich Features]
     
-    C --> C1["Classic Look"]
-    C --> C2["Simple Navigation"]
-    C --> C3["Wide Compatibility"]
+    C --> C1[Classic Look]
+    C --> C2[Simple Navigation]
+    C --> C3[Wide Compatibility]
     
-    D --> D1["Clean Interface"]
-    D --> D2["Fast Loading"]
-    D --> D3["Minimal Design"]
+    D --> D1[Clean Interface]
+    D --> D2[Fast Loading]
+    D --> D3[Minimal Design]
     
-    E --> E1["Custom CSS"]
-    E --> E2["Custom JavaScript"]
-    E --> E3["Brand Integration"]
-    
-    style A fill:#e1f5fe
-    style B fill:#e8f5e8
-    style C fill:#e3f2fd
-    style D fill:#f3e5f5
-    style E fill:#fff3e0
+    E --> E1[Custom CSS]
+    E --> E2[Custom JavaScript]
+    E --> E3[Brand Integration]
 ```
 
 **Diagram Explanation**: This diagram shows the popular MkDocs themes and their characteristics.
@@ -1783,32 +1720,26 @@ MkDocs supports plugins to extend functionality and add new features.
 
 ```mermaid
 graph TD
-    A["MkDocs Plugins"] --> B["Search"]
-    A --> C["Awesome Pages"]
-    A --> D["Minify"]
-    A --> E["Git Revision Date"]
+    A[MkDocs Plugins] --> B[Search]
+    A --> C[Awesome Pages]
+    A --> D[Minify]
+    A --> E[Git Revision Date]
     
-    B --> B1["Built-in Search"]
-    B --> B2["Lunr.js Integration"]
-    B --> B3["Search Highlighting"]
+    B --> B1[Built-in Search]
+    B --> B2[Lunr.js Integration]
+    B --> B3[Search Highlighting]
     
-    C --> C1["Auto Navigation"]
-    C --> C2["File-based Ordering"]
-    C --> C3["Page Exclusion"]
+    C --> C1[Auto Navigation]
+    C --> C2[File-based Ordering]
+    C --> C3[Page Exclusion]
     
-    D --> D1["HTML Minification"]
-    D --> D2["CSS Minification"]
-    D --> D3["JavaScript Minification"]
+    D --> D1[HTML Minification]
+    D --> D2[CSS Minification]
+    D --> D3[JavaScript Minification]
     
-    E --> E1["Last Modified Dates"]
-    E --> E2["Git Integration"]
-    E --> E3["Automatic Updates"]
-    
-    style A fill:#e1f5fe
-    style B fill:#e8f5e8
-    style C fill:#e3f2fd
-    style D fill:#f3e5f5
-    style E fill:#fff3e0
+    E --> E1[Last Modified Dates]
+    E --> E2[Git Integration]
+    E --> E3[Automatic Updates]
 ```
 
 **Diagram Explanation**: This diagram shows popular MkDocs plugins and their features.
@@ -1890,32 +1821,26 @@ MkDocs provides multiple deployment options for hosting your documentation.
 
 ```mermaid
 graph TD
-    A["MkDocs Deployment"] --> B["GitHub Pages"]
-    A --> C["Netlify"]
-    A --> D["Vercel"]
-    A --> E["Self-hosted"]
+    A[MkDocs Deployment] --> B[GitHub Pages]
+    A --> C[Netlify]
+    A --> D[Vercel]
+    A --> E[Self-hosted]
     
-    B --> B1["Free Hosting"]
-    B --> B2["Git Integration"]
-    B --> B3["Automatic Updates"]
+    B --> B1[Free Hosting]
+    B --> B2[Git Integration]
+    B --> B3[Automatic Updates]
     
-    C --> C1["Drag and Drop"]
-    C --> C2["Git Integration"]
-    C --> C3["Custom Domains"]
+    C --> C1[Drag and Drop]
+    C --> C2[Git Integration]
+    C --> C3[Custom Domains]
     
-    D --> D1["Fast Deployment"]
-    D --> D2["Edge Network"]
-    D --> D3["Automatic Builds"]
+    D --> D1[Fast Deployment]
+    D --> D2[Edge Network]
+    D --> D3[Automatic Builds]
     
-    E --> E1["Full Control"]
-    E --> E2["Custom Server"]
-    E --> E3["Internal Use"]
-    
-    style A fill:#e1f5fe
-    style B fill:#e8f5e8
-    style C fill:#e3f2fd
-    style D fill:#f3e5f5
-    style E fill:#fff3e0
+    E --> E1[Full Control]
+    E --> E2[Custom Server]
+    E --> E3[Internal Use]
 ```
 
 **Diagram Explanation**: This diagram shows the different deployment options for MkDocs documentation.
@@ -2184,36 +2109,30 @@ Following best practices ensures your documentation is effective and maintainabl
 
 ```mermaid
 graph TD
-    A["Documentation Best Practices"] --> B["Content Quality"]
-    A --> C["Structure and Organization"]
-    A --> D["User Experience"]
-    A --> E["Maintenance"]
+    A[Documentation Best Practices] --> B[Content Quality]
+    A --> C[Structure and Organization]
+    A --> D[User Experience]
+    A --> E[Maintenance]
     
-    B --> B1["Clear and Concise"]
-    B --> B2["Accurate Information"]
-    B --> B3["Up-to-date Content"]
-    B --> B4["Examples and Use Cases"]
+    B --> B1[Clear and Concise]
+    B --> B2[Accurate Information]
+    B --> B3[Up-to-date Content]
+    B --> B4[Examples and Use Cases]
     
-    C --> C1["Logical Navigation"]
-    C --> C2["Consistent Formatting"]
-    C --> C3["Proper Categorization"]
-    C --> C4["Search-friendly"]
+    C --> C1[Logical Navigation]
+    C --> C2[Consistent Formatting]
+    C --> C3[Proper Categorization]
+    C --> C4[Search-friendly]
     
-    D --> D1["Fast Loading"]
-    D --> D2["Mobile Responsive"]
-    D --> D3["Accessible Design"]
-    D --> D4["Easy Navigation"]
+    D --> D1[Fast Loading]
+    D --> D2[Mobile Responsive]
+    D --> D3[Accessible Design]
+    D --> D4[Easy Navigation]
     
-    E --> E1["Version Control"]
-    E --> E2["Regular Updates"]
-    E --> E3["Feedback Collection"]
-    E --> E4["Automated Testing"]
-    
-    style A fill:#e1f5fe
-    style B fill:#e8f5e8
-    style C fill:#e3f2fd
-    style D fill:#f3e5f5
-    style E fill:#fff3e0
+    E --> E1[Version Control]
+    E --> E2[Regular Updates]
+    E --> E3[Feedback Collection]
+    E --> E4[Automated Testing]
 ```
 
 **Diagram Explanation**: This diagram shows the key areas of documentation best practices.
