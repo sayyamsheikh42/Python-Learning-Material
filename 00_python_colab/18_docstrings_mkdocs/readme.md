@@ -2148,7 +2148,7 @@ black src/
 2. Update documentation
 3. Add changelog entry
 4. Submit pull request
-```
+
 
 ## Best Practices
 
